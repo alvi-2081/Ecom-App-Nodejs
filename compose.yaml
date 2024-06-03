@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  # First container with name "app1" and host port 8080
+  app1:
+    build: .
+    ports:
+      - "3005:3005"
+
+  # Second container with name "app2" and host port 8081
+  app2:
+    build: .
+    ports:
+      - "8000:3005"
